@@ -1,0 +1,39 @@
+.about-me {
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+
+            @include respond(tab-port){
+                flex-direction: column;
+            }
+        }
+
+        &-item {
+            flex: 0 0 50%;
+            font-weight: 900;
+            margin-bottom: 1rem;
+
+            &:not(:last-of-type){
+                text-transform: capitalize;
+            }
+        }
+
+        &-key {
+            font-size: 1.8rem;
+            color: $color-blue-light;
+            margin-right: 1rem;
+        }
+
+        &-value {
+            font-size: 1.5rem;
+            color: $color-grey-light-3;
+        }
+    }
+}

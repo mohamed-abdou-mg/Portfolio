@@ -1,0 +1,22 @@
+{
+  "name": "resume-web-template",
+  "version": "1.0.0",
+  "description": "a simple web template that shows informations about me",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed-abdou-mg/Resume.git"
+  },
+  "author": "mohamed abdou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohamed-abdou-mg/Resume/issues"
+  },
+  "homepage": "https://github.com/mohamed-abdou-mg/Resume#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}

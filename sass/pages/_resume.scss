@@ -1,0 +1,130 @@
+.resume {
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 6rem;
+    }
+
+    &__card {
+        background-color: $color-grey-light;
+        padding: 3rem;
+        transform: scale(1);
+        backface-visibility: hidden;
+        transition: all .6s ease-in-out;
+        
+        &:not(:last-of-type) {
+            margin-bottom: 2rem;
+        }
+
+        &-date {
+            font-size: 1.4rem;
+            color: $color-grey;
+            font-weight: 900;
+        }
+
+        &-title {
+            color: $color-white;
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: capitalize;
+            letter-spacing: .3rem;
+        }
+
+        &-description {
+            color: $color-grey-light-3;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        &:hover {
+            background-color: rgba($color-grey-light, .4);
+            transform: scale(1.05) translateY(-.5rem);
+        }
+    }
+
+    &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__skill {
+        flex: 0 0 30%;
+        margin-bottom: 2rem;
+        
+        @include respond(tab-port){ //> 1200px
+            flex: 0 0 45%;
+        }
+
+        &-data {
+            display: flex;
+        }
+
+        &-name {
+            flex: 1;
+            margin-right: auto;
+            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        &-percentage {
+            color: $color-grey;
+            font-size: 1.4rem;
+            font-weight: 900;
+        }
+
+        &-bar {
+            width: 100%;
+            & > * {
+                width: 100%;
+                height: 1rem;
+                border: 1px solid $color-blue-light;
+                border-radius: 2rem;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 1px;
+                    height: 60%;
+                    background-color: $color-blue-light;
+                    transform: translate(1px, -50%);
+                    border-radius: 2rem;
+                }
+            }
+
+            &-1::after {
+                width: 90%;
+            }
+            &-2::after {
+                width: 75%;
+            }
+            &-3::after {
+                width: 75%;
+            }
+            &-4::after {
+                width: 70%;
+            }
+            &-5::after {
+                width: 80%;
+            }
+            &-6::after {
+                width: 70%;
+            }
+            &-7::after {
+                width: 70%;
+            }
+            &-8::after {
+                width: 85%;
+            }
+            &-9::after {
+                width: 65%;
+            }
+        }
+    }
+}
+

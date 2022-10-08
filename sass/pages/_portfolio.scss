@@ -1,0 +1,94 @@
+.portfolio {
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 6rem;
+
+        @include respond(tab-port){
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+
+    &__card {
+        flex: 0 0 45%;
+        background-color: rgba($color-grey-light, .3);
+        box-shadow: 0 2rem 4rem rgba($color-black, .4rem);
+        border-radius: .5rem;
+        backface-visibility: hidden;
+        margin-bottom: 3rem;
+        transition: all .3s ease-in-out;
+        overflow: hidden;
+
+        @include respond(tab-port){
+            flex: 1;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__details {
+        padding: 1.5rem;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__tag {
+        text-align: center;
+        color: $color-grey-dark;
+        border-radius: 1rem;
+        background-color: $color-grey;
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        flex: 0 0 30%;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        color: $color-white;
+        text-transform: capitalize;
+        letter-spacing: .2rem;
+        font-size: 2.4rem;
+        font-weight: 900;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__buttons .btn {
+        flex: 0 0 30%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__icon {
+        fill: $color-grey;
+        width: 2rem;
+        height: 2rem;
+        transition: all .3s ease-in-out;
+    }
+
+    &__buttons .btn:hover &__icon{
+        fill: $color-grey-dark;
+    }
+
+    &__card:hover {
+        transform: scale(1.05) translateY(-1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .4rem);
+    }
+}
